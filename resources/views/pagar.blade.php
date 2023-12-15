@@ -61,7 +61,7 @@
                         <div class="input-field col m6 s12">
                             <input id="cp" name="cp" type="text" value="{{ old('cp') }}" class="validate" pattern="[0-9]{5}" 
                             title="Ingresa un codigo postal valido" required>
-                            <label for="cp">Codigo postal:</label>
+                            <label for="cp">CP:</label>
                             <strong style="color: red;">@error('cp') {{ $message }} @enderror</strong> 
                         </div>
 
