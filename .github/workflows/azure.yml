@@ -1,0 +1,40 @@
+name: Despliegue a Azure
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código fuente
+        uses: actions/checkout@v2
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+
+      - name: Instalar dependencias
+        run: composer install
+
+      - name: Ejecutar pruebas
+        run: php artisan test
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Desplegar en Azure
+        run: |
+          # Coloca aquí los comandos específicos para el despliegue en Azure
+          # Por ejemplo, comandos para subir tu aplicación Laravel
+          # Pueden incluir comandos como 'php artisan migrate' u otros necesarios
+
+          # Ejemplo ficticio (asegúrate de cambiarlo según tus necesidades):
+          echo "Despliegue en Azure..."
+
+          
