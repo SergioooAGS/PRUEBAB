@@ -16,7 +16,7 @@ jobs:
       - name: Configurar PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.2'
 
       - name: Instalar dependencias
         run: composer install
@@ -37,4 +37,3 @@ jobs:
           # Ejemplo ficticio (asegúrate de cambiarlo según tus necesidades):
           echo "Despliegue en Azure..."
 
-          
